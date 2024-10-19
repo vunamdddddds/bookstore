@@ -33,9 +33,9 @@ public class Main {
 
     // BookStore class with Generics
     static class BookStore<T extends Book> {
-        private List<T> books = new ArrayList<>();
-        private List<Member> members = new ArrayList<>();
-        private SortStrategy sortStrategy;
+        private List<T> books = new ArrayList<>();  // tạo 1 danh sách chứa sách
+        private List<Member> members = new ArrayList<>();  // tạo 1 danh sách chứa Member
+        private SortStrategy sortStrategy;   // tạo 1 Biến 
 
         public void addBook(T book) {
             books.add(book);
@@ -83,10 +83,10 @@ public class Main {
     // Iterator Pattern
     static class BookStoreIterator<T> implements Iterator<T> {
         private List<T> books;
-        private int position = 0;
+        private int position = 0;  
 
         public BookStoreIterator(List<T> books) {
-            this.books = books;
+            this.books = books;  
         }
 
         @Override
